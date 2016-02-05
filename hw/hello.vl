@@ -1,0 +1,8 @@
+module main();
+
+initial
+    begin
+        $display("sup bitch");
+        $finish ;
+    end
+endmodule

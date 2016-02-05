@@ -1,0 +1,17 @@
+#1/25/15
+
+numbers
+    binary
+        unsigned
+            char, string, etc
+            decimal to binary
+                9.75 = 1001.11
+                2^2 2^1 2^0 . 2^-1 2^-2
+                6.625 = 0110.1010 
+        signed
+            2s complement
+                int
+                how to add
+            sign magnitude
+
+                
