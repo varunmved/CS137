@@ -1,10 +1,6 @@
 #parse.py
 #parses the longass list for you
 
-#if you have to add more gates, just append them in order to the list
-gates = ['s1','s0','d0','d1','d2','d3','o']
-LIST_LEN = len(gates)
-
 res = []
 
 #change your input filename here if you want to call it something else
@@ -14,12 +10,17 @@ INPUT_FILE = "input.txt"
 with open(INPUT_FILE) as f:
     content = f.readlines()
 
-#this line deletes the "time s1 s0..." row, the "----" row, and the empty row in the end
-#IF YOU DO NOT HAVE AN EMPTY ROW AT THE END WHEN YOU COPY PASTE, GET RID OF THE -1!!!!!!!
-    #LIKE SO:
-    #content = content[2:]
+#get the name of the gates/input/outputs we care about
+gates = content[0].split()
+gates = gates[1:]
+LIST_LEN = len(gates)
 
-content = content[2:-1]
+#delete the first two rows (name + '-----')
+content = content[2:]
+
+#if you have an empty row in the end of your file, it'll delete it for you
+if content[-1] == '\n':
+    content = content[:-1]
 
 #parse through the lines
 for line in content:
@@ -42,7 +43,7 @@ for line in content:
         if i == LIST_LEN-1:
             out+='\n'
             res.append(out)
-            print(out)
+            #print(out)
 
 #close the file, we're done!
 f.close()
