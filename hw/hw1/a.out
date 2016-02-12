@@ -4,50 +4,54 @@
 :vpi_module "system";
 :vpi_module "v2005_math";
 :vpi_module "va_math";
-S_0x7fe943c03a70 .scope module, "TestMod" "TestMod" 2 20;
+S_0x7fea3ae00220 .scope module, "TestMod" "TestMod" 2 24;
  .timescale 0 0;
-v0x7fe943c18240_0 .net "o0", 0 0, L_0x7fe943c18710; 1 drivers
-v0x7fe943c182e0_0 .net "o1", 0 0, L_0x7fe943c18890; 1 drivers
-v0x7fe943c18360_0 .net "o2", 0 0, L_0x7fe943c18a80; 1 drivers
-v0x7fe943c183e0_0 .net "o3", 0 0, L_0x7fe943c18b60; 1 drivers
-v0x7fe943c18480_0 .var "s0", 0 0;
-v0x7fe943c18530_0 .var "s1", 0 0;
-S_0x7fe943c03b50 .scope module, "md" "DecoderMod" 2 26, 2 6, S_0x7fe943c03a70;
+v0x7fea3ae109e0_0 .net "o0", 0 0, L_0x7fea3ae10eb0; 1 drivers
+v0x7fea3ae10a80_0 .net "o1", 0 0, L_0x7fea3ae11030; 1 drivers
+v0x7fea3ae10b00_0 .net "o2", 0 0, L_0x7fea3ae11220; 1 drivers
+v0x7fea3ae10b80_0 .net "o3", 0 0, L_0x7fea3ae11300; 1 drivers
+v0x7fea3ae10c20_0 .var "s0", 0 0;
+v0x7fea3ae10cd0_0 .var "s1", 0 0;
+S_0x7fea3ae00300 .scope module, "md" "DecoderMod" 2 30, 2 6, S_0x7fea3ae00220;
  .timescale 0 0;
-L_0x7fe943c185b0 .functor NOT 1, v0x7fe943c18480_0, C4<0>, C4<0>, C4<0>;
-L_0x7fe943c18670 .functor NOT 1, v0x7fe943c18530_0, C4<0>, C4<0>, C4<0>;
-L_0x7fe943c18710 .functor AND 1, L_0x7fe943c185b0, L_0x7fe943c18670, C4<1>, C4<1>;
-L_0x7fe943c18830 .functor NOT 1, v0x7fe943c18480_0, C4<0>, C4<0>, C4<0>;
-L_0x7fe943c18890 .functor AND 1, L_0x7fe943c18830, v0x7fe943c18530_0, C4<1>, C4<1>;
-L_0x7fe943c189a0 .functor NOT 1, v0x7fe943c18480_0, C4<0>, C4<0>, C4<0>;
-L_0x7fe943c18a80 .functor AND 1, v0x7fe943c18530_0, L_0x7fe943c189a0, C4<1>, C4<1>;
-L_0x7fe943c18b60 .functor AND 1, v0x7fe943c18530_0, v0x7fe943c18480_0, C4<1>, C4<1>;
-v0x7fe943c05c00_0 .net *"_s0", 0 0, L_0x7fe943c185b0; 1 drivers
-v0x7fe943c17cc0_0 .net *"_s10", 0 0, L_0x7fe943c189a0; 1 drivers
-v0x7fe943c17d50_0 .net *"_s2", 0 0, L_0x7fe943c18670; 1 drivers
-v0x7fe943c17dd0_0 .net *"_s6", 0 0, L_0x7fe943c18830; 1 drivers
-v0x7fe943c17e60_0 .alias "o0", 0 0, v0x7fe943c18240_0;
-v0x7fe943c17f20_0 .alias "o1", 0 0, v0x7fe943c182e0_0;
-v0x7fe943c17fb0_0 .alias "o2", 0 0, v0x7fe943c18360_0;
-v0x7fe943c18070_0 .alias "o3", 0 0, v0x7fe943c183e0_0;
-v0x7fe943c180f0_0 .net "s0", 0 0, v0x7fe943c18480_0; 1 drivers
-v0x7fe943c181c0_0 .net "s1", 0 0, v0x7fe943c18530_0; 1 drivers
-    .scope S_0x7fe943c03a70;
+L_0x7fea3ae10d50 .functor NOT 1, v0x7fea3ae10c20_0, C4<0>, C4<0>, C4<0>;
+L_0x7fea3ae10e10 .functor NOT 1, v0x7fea3ae10cd0_0, C4<0>, C4<0>, C4<0>;
+L_0x7fea3ae10eb0 .functor AND 1, L_0x7fea3ae10d50, L_0x7fea3ae10e10, C4<1>, C4<1>;
+L_0x7fea3ae10fd0 .functor NOT 1, v0x7fea3ae10cd0_0, C4<0>, C4<0>, C4<0>;
+L_0x7fea3ae11030 .functor AND 1, v0x7fea3ae10c20_0, L_0x7fea3ae10fd0, C4<1>, C4<1>;
+L_0x7fea3ae11140 .functor NOT 1, v0x7fea3ae10c20_0, C4<0>, C4<0>, C4<0>;
+L_0x7fea3ae11220 .functor AND 1, v0x7fea3ae10cd0_0, L_0x7fea3ae11140, C4<1>, C4<1>;
+L_0x7fea3ae11300 .functor AND 1, v0x7fea3ae10cd0_0, v0x7fea3ae10c20_0, C4<1>, C4<1>;
+v0x7fea3ae003e0_0 .net *"_s0", 0 0, L_0x7fea3ae10d50; 1 drivers
+v0x7fea3ae10460_0 .net *"_s10", 0 0, L_0x7fea3ae11140; 1 drivers
+v0x7fea3ae104f0_0 .net *"_s2", 0 0, L_0x7fea3ae10e10; 1 drivers
+v0x7fea3ae10570_0 .net *"_s6", 0 0, L_0x7fea3ae10fd0; 1 drivers
+v0x7fea3ae10600_0 .alias "o0", 0 0, v0x7fea3ae109e0_0;
+v0x7fea3ae106c0_0 .alias "o1", 0 0, v0x7fea3ae10a80_0;
+v0x7fea3ae10750_0 .alias "o2", 0 0, v0x7fea3ae10b00_0;
+v0x7fea3ae10810_0 .alias "o3", 0 0, v0x7fea3ae10b80_0;
+v0x7fea3ae10890_0 .net "s0", 0 0, v0x7fea3ae10c20_0; 1 drivers
+v0x7fea3ae10960_0 .net "s1", 0 0, v0x7fea3ae10cd0_0; 1 drivers
+    .scope S_0x7fea3ae00220;
 T_0 ;
-    %vpi_call 2 29 "$monitor", "%0d\011%b\011%b\011%b\011%b\011%b\011%b", $time, v0x7fe943c18480_0, v0x7fe943c18530_0, v0x7fe943c18240_0, v0x7fe943c182e0_0, v0x7fe943c18360_0, v0x7fe943c183e0_0;
-    %vpi_call 2 30 "$display", "Time\011s\011o0\011o1";
-    %vpi_call 2 31 "$display", "--------------------------";
+    %vpi_call 2 33 "$monitor", "%0d\011%b\011%b\011%b\011%b\011%b\011%b", $time, v0x7fea3ae10c20_0, v0x7fea3ae10cd0_0, v0x7fea3ae109e0_0, v0x7fea3ae10a80_0, v0x7fea3ae10b00_0, v0x7fea3ae10b80_0;
+    %vpi_call 2 34 "$display", "Time\011s0\011s1\011o0\011o1\011o2\011o3";
+    %vpi_call 2 35 "$display", "--------------------------";
     %end;
     .thread T_0;
-    .scope S_0x7fe943c03a70;
+    .scope S_0x7fea3ae00220;
 T_1 ;
-    %set/v v0x7fe943c18480_0, 0, 1;
+    %set/v v0x7fea3ae10c20_0, 0, 1;
+    %set/v v0x7fea3ae10cd0_0, 0, 1;
     %delay 1, 0;
-    %set/v v0x7fe943c18530_0, 1, 1;
+    %set/v v0x7fea3ae10c20_0, 0, 1;
+    %set/v v0x7fea3ae10cd0_0, 1, 1;
     %delay 1, 0;
-    %set/v v0x7fe943c18480_0, 0, 1;
+    %set/v v0x7fea3ae10c20_0, 1, 1;
+    %set/v v0x7fea3ae10cd0_0, 0, 1;
     %delay 1, 0;
-    %set/v v0x7fe943c18530_0, 1, 1;
+    %set/v v0x7fea3ae10c20_0, 1, 1;
+    %set/v v0x7fea3ae10cd0_0, 1, 1;
     %end;
     .thread T_1;
 # The file index is used to find the file name in the following table.
