@@ -18,8 +18,8 @@ module MuxMod(s1, s0, d0, d1, d2, d3,o);
     and(and2,d2,s0_inv,s1);
     and(and3,d3,s0,s1);
 
-    //or(o,and0,and1,and2,and3);
-    assign o = and0 || and1 || and2 || and3;    
+    or(o,and0,and1,and2,and3);
+    //assign o = and0 || and1 || and2 || and3;    
 endmodule
 
 module TestMod;
