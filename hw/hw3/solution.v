@@ -1,6 +1,6 @@
 // Adder.v, 5-Bit Adder
 // Adding Numbers, sum x and y (each two-decimal digit)
-// PUT YOUR NAME HERE
+// Varun Ved
 
 module TestMod;                     // the "main" thing
    parameter STDIN = 32'h8000_0000; // keyboard input
